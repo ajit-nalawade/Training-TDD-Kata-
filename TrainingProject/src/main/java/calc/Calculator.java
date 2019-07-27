@@ -8,7 +8,21 @@ public class Calculator {
 		if(!"".equals(numbers))
 		{
 			String [] number = numbers.split(",");
-			result = Integer.parseInt(number[0]) + Integer.parseInt(number[1]);
+			result = performAddition(number);
+		}
+		return result;
+	}
+
+	/**
+	 * @param numbers
+	 * @return
+	 */
+	private int performAddition(String[] numbers) {
+		int result = 0;
+		
+		for(String num : numbers)
+		{
+			result += Integer.parseInt(num);
 		}
 		return result;
 	}
