@@ -40,8 +40,8 @@ class CalculatorSpec extends Specification{
 			def numbers = '2,-1,-1,2'
 		when : 'Calculator.add is called'
 			def result = calc.add(numbers)
-		then : 'It should return addition of 2,2'
-			result == 4
+		then : 'It should throw exception'
+			thrown(Exception)
 	}
 }
 

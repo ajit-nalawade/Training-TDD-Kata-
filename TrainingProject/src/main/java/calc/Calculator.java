@@ -2,7 +2,7 @@ package calc;
 
 public class Calculator {
 
-	int add(String numbers)
+	int add(String numbers) throws Exception
 	{
 		int result = 0;
 		if(!"".equals(numbers))
@@ -16,8 +16,9 @@ public class Calculator {
 	/**
 	 * @param numbers
 	 * @return
+	 * @throws Exception 
 	 */
-	private int performAddition(String[] numbers) {
+	private int performAddition(String[] numbers) throws Exception {
 		int result = 0;
 		
 		for(String num : numbers)
@@ -26,6 +27,11 @@ public class Calculator {
 			{
 				result += Integer.parseInt(num);
 			}
+			else
+			{
+				throw new Exception();
+			}
+			
 		}
 		return result;
 	}
