@@ -22,7 +22,10 @@ public class Calculator {
 		
 		for(String num : numbers)
 		{
-			result += Integer.parseInt(num);
+			if(Integer.parseInt(num) > 0)
+			{
+				result += Integer.parseInt(num);
+			}
 		}
 		return result;
 	}
